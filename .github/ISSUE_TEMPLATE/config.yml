@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report by email or send a sample
+    url: https://redlineip.github.io/MXmlBench/start/reporting-bugs/
+    about: Email support@redlineip.com. Manuscripts and defect report zips go there, never in an issue.
+  - name: Private vulnerability report
+    url: https://github.com/RedlineIP/MXmlBench/security/advisories/new
+    about: Security problems, reported privately.
+  - name: User guide
+    url: https://redlineip.github.io/MXmlBench/
+    about: Installing, registering and connecting M-XML Bench to your git client.

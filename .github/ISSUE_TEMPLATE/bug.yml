@@ -1,0 +1,104 @@
+name: Bug report
+description: Something in M-XML Bench is wrong or broken.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Keep client content out of every field, the title included. Never attach manuscripts or defect report zips: email them to support@redlineip.com with this issue's number. You can also [report by email alone](https://redlineip.github.io/MXmlBench/start/reporting-bugs/).
+
+        Security problems go in a [private vulnerability report](https://github.com/RedlineIP/MXmlBench/security/advisories/new) instead.
+
+  - type: input
+    id: version
+    attributes:
+      label: M-XML Bench version
+      description: "Settings > Apps > Installed apps shows it, for example M-XML Bench version 0.9.7."
+      placeholder: 0.9.7
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: "Run `winver` to see it."
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where did it happen?
+      options:
+        - During a git merge, rebase or cherry-pick (the merge driver)
+        - In the Workbench window
+        - Setup or uninstall
+        - Registration
+        - Somewhere else
+    validations:
+      required: true
+
+  - type: dropdown
+    id: client
+    attributes:
+      label: Git client
+      description: Skip this for setup and registration problems.
+      options:
+        - git command line
+        - VS Code
+        - Visual Studio
+        - Git Extensions
+        - JetBrains IDE (Rider, IntelliJ IDEA)
+        - TortoiseGit
+        - Tower
+        - Sourcetree
+        - Fork
+        - None, I opened the files in the Workbench directly
+        - Other
+
+  # TODO(Justin): the fields that make a manuscript merge problem reproducible.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the elements involved, not client content. Leave out client and carrier names, product and program codes, rate and table values, and file, repository and branch names.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The same rule applies here. Describe elements, not client content.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Error text or console output
+      description: Paste it as text. Check it for client names, file paths and other confidential values first.
+      render: text
+
+  - type: checkboxes
+    id: confidential
+    attributes:
+      label: Before you submit
+      description: Editing an issue later does not remove the text. GitHub keeps every edit in its history.
+      options:
+        - label: The title and every field above are free of client content.
+          required: true
