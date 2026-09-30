@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-g5ptsecz"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>The window | M-XML Bench</title><link rel="canonical" href="https://redlineip.github.io/MXmlBench/workbench/the-window/"/><link rel="sitemap" href="/MXmlBench/sitemap-index.xml"/><link rel="shortcut icon" href="/MXmlBench/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v7.3.5"/><meta name="generator" content="Starlight v0.42.4"/><meta property="og:title" content="The window"/><meta property="og:type" content="article"/><meta property="og:url" content="https://redlineip.github.io/MXmlBench/workbench/the-window/"/><meta property="og:locale" content="en"/><meta property="og:description" content="How to open a merge in the Workbench, and what each part of the window shows."/><meta property="og:site_name" content="M-XML Bench"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="How to open a merge in the Workbench, and what each part of the window shows."/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/MXmlBench/_astro/print.ehPL0gv-.css" media="print"><link rel="stylesheet" href="/MXmlBench/_astro/common.UKB7jnmj.css"><style>@layer starlight.components{svg:where(.astro-hkc32dio){color:var(--sl-icon-color);font-size:var(--sl-icon-size,1em);width:1em;height:1em}}
+</style><script type="module" src="/MXmlBench/_astro/page.Dwipeu-R.js"></script></head><body class="astro-g5ptsecz"><a class="sl-skip-link astro-qb7clj6f" href="#_top">Skip to content</a><div class="page sl-flex astro-yntsjkba"><header class="header astro-yntsjkba"><div class="header astro-by6fddyj"><div class="title-wrapper sl-flex astro-by6fddyj"><a href="/MXmlBench/" class="site-title sl-flex astro-6rvad3va"><img class="astro-6rvad3va" alt="M-XML Bench" src="/MXmlBench/_astro/mark.wOvevk7U.svg" width="64" height="64"><span class="astro-6rvad3va" translate="no">M-XML Bench</span></a></div><div class="sl-flex print:hidden astro-by6fddyj"><site-search class="astro-by6fddyj astro-b5kgnn7o" data-translations="{&quot;placeholder&quot;:&quot;Search&quot;}"><button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-b5kgnn7o"><svg aria-hidden="true" class="astro-b5kgnn7o astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg><span class="sl-hidden md:sl-block astro-b5kgnn7o" aria-hidden="true">Search</span><kbd class="sl-hidden md:sl-flex astro-b5kgnn7o" style="display: none;"><kbd class="astro-b5kgnn7o">Ctrl</kbd><kbd class="astro-b5kgnn7o">K</kbd></kbd></button><dialog style="padding:0" aria-label="Search" class="astro-b5kgnn7o"><div class="dialog-frame sl-flex astro-b5kgnn7o"><button data-close-modal class="sl-flex md:sl-hidden astro-b5kgnn7o">Cancel</button><div class="search-container astro-b5kgnn7o"><div id="starlight__search" class="astro-b5kgnn7o"></div></div></div></dialog></site-search><script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script><script type="module" src="/MXmlBench/_astro/Search.astro_astro_type_script_index_0_lang.BlQBr1dT.js"></script></div><div class="sl-hidden md:sl-flex print:hidden right-group astro-by6fddyj"><div class="sl-flex social-icons astro-by6fddyj"><a href="https://github.com/RedlineIP/MXmlBench/releases" rel="me" class="sl-flex astro-n2mnl6yq"><span class="sr-only astro-n2mnl6yq">Releases</span><svg aria-hidden="true" class="astro-n2mnl6yq astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Select theme</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="dark" class="astro-2z5xp7gb">Dark</option><option value="light" class="astro-2z5xp7gb">Light</option><option value="auto" selected class="astro-2z5xp7gb">Auto</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script><script type="module">var e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e));function r(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function a(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});var o=class extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}};customElements.define(`starlight-theme-select`,o);</script><script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script></div></div></header><nav class="sidebar print:hidden astro-yntsjkba" aria-label="Main"><button popovertarget="starlight__sidebar" class="sl-menu-button sl-flex md:sl-hidden print:hidden astro-r2osgdlg"><svg aria-hidden="true" class="open-menu astro-r2osgdlg astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg><svg aria-hidden="true" class="close-menu astro-r2osgdlg astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg><span class="sr-only astro-r2osgdlg">Menu</span></button><script type="module">var e=class extends HTMLElement{constructor(){super();let e=matchMedia(`(min-width: 50em)`),t=()=>{this.popover=e.matches?null:`auto`};t(),e.addEventListener(`change`,()=>t()),this.addEventListener(`toggle`,({newState:e})=>this.trapFocus(e===`open`))}trapFocus(e){document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}};customElements.define(`sl-sidebar-pane`,e);</script><sl-sidebar-pane popover id="starlight__sidebar" class="sidebar-pane astro-yntsjkba"><div class="sidebar-content sl-flex astro-yntsjkba"><sl-sidebar-state-persist data-hash="1v6h24p" class="astro-ipdry5cl"><script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script><ul class="top-level astro-rmhv4bp6"><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Getting started</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="0"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/MXmlBench/start/quick-start/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Quick start</span></a></li><li class="astro-rmhv4bp6"><a href="/MXmlBench/start/installing/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Installing</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Using the Workbench</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="1"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/MXmlBench/workbench/the-window/" aria-current="page" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">The window</span></a></li><li class="astro-rmhv4bp6"><a href="/MXmlBench/workbench/resolving/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Resolving conflicts</span></a></li><li class="astro-rmhv4bp6"><a href="/MXmlBench/workbench/tables/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Tables</span></a></li><li class="astro-rmhv4bp6"><a href="/MXmlBench/workbench/saving/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Saving and finishing</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Working with git</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="2"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/MXmlBench/git/git-clients/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Git clients</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Help</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="3"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/MXmlBench/help/troubleshooting/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Troubleshooting</span></a></li><li class="astro-rmhv4bp6"><a href="/MXmlBench/start/reporting-bugs/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Reporting bugs</span></a></li></ul></details></li></ul><script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist><div class="md:sl-hidden"><div class="mobile-preferences sl-flex astro-p4azlveh"><div class="social-icons astro-p4azlveh"><a href="https://github.com/RedlineIP/MXmlBench/releases" rel="me" class="sl-flex astro-n2mnl6yq"><span class="sr-only astro-n2mnl6yq">Releases</span><svg aria-hidden="true" class="astro-n2mnl6yq astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Select theme</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="dark" class="astro-2z5xp7gb">Dark</option><option value="light" class="astro-2z5xp7gb">Light</option><option value="auto" selected class="astro-2z5xp7gb">Auto</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script></div></div></div></sl-sidebar-pane></nav><div class="main-frame astro-yntsjkba"><script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><div class="lg:sl-flex astro-lrzkfocr"><aside class="right-sidebar-container print:hidden astro-lrzkfocr"><div class="right-sidebar astro-lrzkfocr"><div class="lg:sl-hidden astro-qok35upx"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-66cqc7ze"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-66cqc7ze"><details id="starlight__mobile-toc" class="astro-66cqc7ze"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-66cqc7ze"><span class="toggle sl-flex astro-66cqc7ze">On this page<svg aria-hidden="true" class="caret astro-66cqc7ze astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-66cqc7ze"></span></summary><div class="dropdown astro-66cqc7ze"><ul class="isMobile astro-jugkfwgx" style="--depth: 0;"><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#_top" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Overview</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#opening-a-merge" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Opening a merge</span></a><ul class="isMobile astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#from-git-mergetool" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">From git mergetool</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#from-the-start-menu" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">From the Start menu</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#more-than-one-case" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">More than one case</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#the-layout" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">The layout</span></a><ul class="isMobile astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-input-panes" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The input panes</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-line-strip" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The line strip</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-merged-result" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The merged result</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-drawer" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The drawer</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#the-ribbon" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">The ribbon</span></a><ul class="isMobile astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#session-tab" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">Session tab</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#merge-tab" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">Merge tab</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#view-tab" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">View tab</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#status-and-finishing-buttons" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">Status and finishing buttons</span></a></li></ul></li></ul></div></details></nav></mobile-starlight-toc><script type="module" src="/MXmlBench/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.C3fM4Kra.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-qok35upx"><div class="sl-container astro-qok35upx"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-jugkfwgx" style="--depth: 0;"><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#_top" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Overview</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#opening-a-merge" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Opening a merge</span></a><ul class="astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#from-git-mergetool" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">From git mergetool</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#from-the-start-menu" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">From the Start menu</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#more-than-one-case" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">More than one case</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#the-layout" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">The layout</span></a><ul class="astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-input-panes" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The input panes</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-line-strip" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The line strip</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-merged-result" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The merged result</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-drawer" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The drawer</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#the-ribbon" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">The ribbon</span></a><ul class="astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#session-tab" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">Session tab</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#merge-tab" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">Merge tab</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#view-tab" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">View tab</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#status-and-finishing-buttons" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">Status and finishing buttons</span></a></li></ul></li></ul></nav></starlight-toc><script type="module" src="/MXmlBench/_astro/TableOfContents.astro_astro_type_script_index_0_lang.BpJaGz7G.js"></script></div></div></div></aside><div class="main-pane astro-lrzkfocr"><main data-pagefind-body class="astro-g5ptsecz" lang="en" dir="ltr"><div class="content-panel astro-a7po4psb"><div class="sl-container astro-a7po4psb"><h1 id="_top" class="astro-bebwqqxs">The window</h1></div></div><div class="content-panel astro-a7po4psb"><div class="sl-container astro-a7po4psb"><div class="sl-markdown-content">
+<div class="sl-heading-wrapper level-h2"><h2 id="opening-a-merge">Opening a merge</h2><a class="sl-anchor-link" href="#opening-a-merge"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Opening a merge”</span></a></div>
+<p>Each merge you open is a <em>case</em>: a base, an ours and a theirs file, and the merged result the driver made from them. There are three ways to open one, and they differ in what the Workbench can do once it is open.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="from-git-mergetool">From git mergetool</h3><a class="sl-anchor-link" href="#from-git-mergetool"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “From git mergetool”</span></a></div>
+<p><code dir="auto">git mergetool</code>, or a git client that runs it for you, opens one conflicted file. The title bar reads <strong>git mergetool ·</strong> and the file name, and the window works on that file only: there is no <strong>Open case</strong>, no <strong>+</strong> tab and no <strong>Save as</strong>. When you finish, the result goes straight back to git. <a href="../../git/git-clients/">Git clients</a> covers launching from an editor or a GUI client.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="from-the-start-menu">From the Start menu</h3><a class="sl-anchor-link" href="#from-the-start-menu"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “From the Start menu”</span></a></div>
+<p>Opened on its own, the Workbench shows the start screen.</p>
+<figure><a href="/MXmlBench/_astro/start-screen.DhxGnxSx.webp" title="Open full size"><img src="/MXmlBench/_astro/start-screen.DhxGnxSx_1sAFOL.webp" srcset="/MXmlBench/_astro/start-screen.DhxGnxSx_1sAFOL.webp 1x, /MXmlBench/_astro/start-screen.DhxGnxSx_1Rwv6y.webp 2x" alt="The start screen, headed Put a merge on the bench, with the Three files and From git tabs, fields for base, ours and theirs, and Run driver." loading="lazy" decoding="async" width="688" height="352"></a></figure>
+<ul>
+<li><strong>Three files</strong> takes a base, an ours and a theirs file. Type the paths or use <strong>Browse</strong>, then press <strong>Run driver</strong>. The panes are labeled with the file names.</li>
+<li><strong>From git</strong> takes a repository in the middle of a merge. Choose the repository with <strong>Browse</strong>; the Workbench lists its conflicted <code dir="auto">.xml</code> files. Pick one and press <strong>Run driver</strong>. The Workbench reads the three versions from git’s index, and labels the panes with the current branch, the merge base’s short commit id, and the branch being merged in.</li>
+<li><strong>Recent</strong> lists the last five cases, marked <strong>files</strong>, <strong>git</strong> or <strong>resume</strong>. Click one to open it again, or <strong>×</strong> to remove it from the list.</li>
+</ul>
+<p>Either way, the driver runs on the three files and the result opens on the bench. The files you picked are not changed until you save.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="more-than-one-case">More than one case</h3><a class="sl-anchor-link" href="#more-than-one-case"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “More than one case”</span></a></div>
+<p>Outside git mergetool, each case opens in its own tab. Press <strong>+</strong> at the end of the tab bar, or <strong>Open case</strong> on the <strong>Session</strong> tab, to put another one on the bench. <strong>Open recent</strong> on the same tab lists the recent cases.</p>
+<aside aria-label="A second window" class="starlight-aside starlight-aside--note"><p class="starlight-aside__title" aria-hidden="true"><svg aria-hidden="true" class="starlight-aside__icon astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z"/></svg>A second window</p><div class="starlight-aside__content"><p>If one Workbench window is already open, a second one starts with the default layout and does not remember layout changes or recent cases. When git mergetool opens it, the ribbon says so. Close the first window if you want your own layout back.</p></div></aside>
+<div class="sl-heading-wrapper level-h2"><h2 id="the-layout">The layout</h2><a class="sl-anchor-link" href="#the-layout"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “The layout”</span></a></div>
+<figure><a href="/MXmlBench/_astro/quick-mergetool.1w2TPuJE.webp" title="Open full size"><img src="/MXmlBench/_astro/quick-mergetool.1w2TPuJE_ZkohfJ.webp" srcset="/MXmlBench/_astro/quick-mergetool.1w2TPuJE_ZkohfJ.webp 1x, /MXmlBench/_astro/quick-mergetool.1w2TPuJE_1SxgNP.webp 2x" alt="The Workbench open on policy.xml. Top to bottom: the title bar with the ribbon tabs, the ribbon, the tab bar, then the Structural diff on the left, the ours, base and theirs panes with the line strip and the merged result on the right, and the drawer with the Conflict report along the bottom." loading="lazy" decoding="async" width="1440" height="900"></a></figure>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Where</th>
+<th>What it is for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title bar</td>
+<td>Top</td>
+<td>The ribbon tabs (<strong>Session</strong>, <strong>Merge</strong>, <strong>View</strong>), the file name under git mergetool, and the window controls. Drag it to move the window; double-click it to maximize.</td>
+</tr>
+<tr>
+<td>Ribbon</td>
+<td>Under the title bar</td>
+<td>The buttons for the tab you picked, the merge’s status on the right, and the finishing buttons at the far right.</td>
+</tr>
+<tr>
+<td>Tab bar</td>
+<td>Under the ribbon</td>
+<td>One tab per open case, and one per table you are reviewing. A dot on a tab means unsaved edits.</td>
+</tr>
+<tr>
+<td>Structural diff</td>
+<td>Left</td>
+<td>Every element that changed and what the driver did with it. See <a href="../resolving/#read-the-structural-diff">Read the Structural diff</a>.</td>
+</tr>
+<tr>
+<td><strong>ours</strong>, <strong>base</strong>, <strong>theirs</strong></td>
+<td>Top right</td>
+<td>The three inputs, read-only.</td>
+</tr>
+<tr>
+<td>Line strip</td>
+<td>Under the inputs</td>
+<td>One line compared across the three inputs, piece by piece.</td>
+</tr>
+<tr>
+<td><strong>merged result</strong></td>
+<td>Bottom right</td>
+<td>The file that will be saved. You can edit it.</td>
+</tr>
+<tr>
+<td>Drawer</td>
+<td>Bottom</td>
+<td>The <strong>Conflict report</strong> and <strong>Case</strong> tabs.</td>
+</tr>
+</tbody>
+</table>
+<p>Drag any divider to resize the panels. The Workbench remembers the sizes, the panels you have open and the <strong>View</strong> options on this machine.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="the-input-panes">The input panes</h3><a class="sl-anchor-link" href="#the-input-panes"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “The input panes”</span></a></div>
+<p><strong>ours</strong> is your side, <strong>theirs</strong> is the side being merged in, and <strong>base</strong> is the version both started from. In each pane:</p>
+<ul>
+<li>Lines that side changed are green, and the changed words are highlighted.</li>
+<li>Lines inside an open conflict are red.</li>
+<li>Hatched gaps keep matching lines side by side. A gap can carry a note: <strong>only in ours</strong> marks lines one side added, and <strong>moved by ours · at line 12</strong> marks an element that side moved. Click a <strong>moved by</strong> note to inspect that element (see <a href="../resolving/#field-inspect">Field Inspect</a>).</li>
+<li>A red squiggle marks a spot where the file is not well-formed XML. Hover it for the reason.</li>
+</ul>
+<p>To make room, close <strong>base</strong> with the <strong>✕</strong> in its header, and bring it back with <strong>▸ base</strong> or <strong>Base</strong> on the <strong>View</strong> tab.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="the-line-strip">The line strip</h3><a class="sl-anchor-link" href="#the-line-strip"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “The line strip”</span></a></div>
+<p>Click a line in ours, base or theirs, and the line strip compares it with the matching lines in the other two, piece by piece. Each difference gets a box with a tag: <strong>ours only</strong>, <strong>theirs only</strong>, <strong>agreed</strong> where both sides made the same change, or <strong>both</strong> where they disagree. Inside the box, the base value comes first, then ours, then theirs.</p>
+<figure><a href="/MXmlBench/_astro/resolve-line-strip.BX1brMy6.webp" title="Open full size"><img src="/MXmlBench/_astro/resolve-line-strip.BX1brMy6_1UTHiD.webp" srcset="/MXmlBench/_astro/resolve-line-strip.BX1brMy6_1UTHiD.webp 1x, /MXmlBench/_astro/resolve-line-strip.BX1brMy6_295t6e.webp 2x" alt="The line strip on the deductible line: the shared text, then a box tagged both holding 500 from base, 250 from ours and 750 from theirs." loading="lazy" decoding="async" width="886" height="114"></a></figure>
+<p>The header names the line number in each pane and counts the differences. On a line inside a conflict, the ours and theirs values in the box are buttons that take that side.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="the-merged-result">The merged result</h3><a class="sl-anchor-link" href="#the-merged-result"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “The merged result”</span></a></div>
+<p>This is the file the Workbench will save. It starts as the driver’s output, with conflict markers wherever the driver left a conflict. Its header shows <strong>1 conflict</strong>, <strong>not well-formed</strong> or <strong>resolved</strong>. Click <strong>not well-formed</strong> to jump to the spot.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="the-drawer">The drawer</h3><a class="sl-anchor-link" href="#the-drawer"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “The drawer”</span></a></div>
+<ul>
+<li><strong>Conflict report</strong> lists every conflict and silent drop the driver reported when the case opened, with the element’s path and the reason. It is a record of the driver’s output, so it does not change as you resolve. The reasons use git’s names, <strong>local</strong> and <strong>remote</strong>, for ours and theirs.</li>
+<li><strong>Case</strong> collects what you tell the driver engineer when you <a href="../../start/reporting-bugs/#when-the-merge-driver-decides-wrong">report a wrong decision</a>.</li>
+</ul>
+<p><strong>▾ hide</strong> folds the drawer down to its tabs. <strong>▴ show</strong>, either tab, or <strong>Conflict report</strong> on the <strong>Session</strong> tab opens it again.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="the-ribbon">The ribbon</h2><a class="sl-anchor-link" href="#the-ribbon"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “The ribbon”</span></a></div>
+<p>The ribbon has three tabs, picked in the title bar. <strong>Merge</strong> is open when a case loads.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="session-tab">Session tab</h3><a class="sl-anchor-link" href="#session-tab"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Session tab”</span></a></div>
+<figure><a href="/MXmlBench/_astro/ribbon-session.DxzJ8AQs.webp" title="Open full size"><img src="/MXmlBench/_astro/ribbon-session.DxzJ8AQs_ZUCNdR.webp" srcset="/MXmlBench/_astro/ribbon-session.DxzJ8AQs_ZUCNdR.webp 1x, /MXmlBench/_astro/ribbon-session.DxzJ8AQs_Z2eTtr7.webp 2x" alt="The Session tab under git mergetool: the MERGETOOL group with WRITES TO policy.xml and Reload, OUTPUT with Conflict report, and HELP with License and About." loading="lazy" decoding="async" width="389" height="69"></a></figure>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Button</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FILE</strong></td>
+<td><strong>Open case</strong></td>
+<td>Opens the start screen over the current case, to add another tab. Not under git mergetool.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Open recent</strong></td>
+<td>Lists recent cases. Not under git mergetool.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Reload</strong></td>
+<td>Runs the driver again on the case’s input files and starts the merged result over.</td>
+</tr>
+<tr>
+<td><strong>MERGETOOL</strong></td>
+<td><strong>WRITES TO</strong></td>
+<td>Under git mergetool, in place of FILE: the file the result goes to.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Reload</strong></td>
+<td>Runs the driver again on git’s inputs. After a resumed merge it is a menu: <strong>Reload kept merge</strong> or <strong>Start over from git’s inputs</strong>.</td>
+</tr>
+<tr>
+<td><strong>OUTPUT</strong></td>
+<td><strong>Conflict report</strong></td>
+<td>Shows or hides the drawer.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Save as</strong></td>
+<td>Saves the merged result to a file you choose. Not under git mergetool.</td>
+</tr>
+<tr>
+<td><strong>HELP</strong></td>
+<td><strong>License</strong></td>
+<td>Shows who this machine is registered to and until when.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>About</strong></td>
+<td>A short description of M-XML Bench.</td>
+</tr>
+</tbody>
+</table>
+<p>Reload asks first if you have edited the merged result, since it replaces your edits.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="merge-tab">Merge tab</h3><a class="sl-anchor-link" href="#merge-tab"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Merge tab”</span></a></div>
+<figure><a href="/MXmlBench/_astro/quick-ribbon.awB5-mOY.webp" title="Open full size"><img src="/MXmlBench/_astro/quick-ribbon.awB5-mOY_ZapVjx.webp" srcset="/MXmlBench/_astro/quick-ribbon.awB5-mOY_ZapVjx.webp 1x, /MXmlBench/_astro/quick-ribbon.awB5-mOY_1YHkbU.webp 2x" alt="The Navigate and Resolve groups on the Merge tab: Prev, the CONFLICT readout, Next, Find, Take ours, Take theirs, Take both, Isolate and Undo." loading="lazy" decoding="async" width="557" height="69"></a></figure>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Button</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NAVIGATE</strong></td>
+<td><strong>Prev</strong>, <strong>Next</strong></td>
+<td>Step to the previous or next conflict. The <strong>CONFLICT</strong> readout between them shows which one you are on, for example <strong>1 / 3</strong>.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Find</strong></td>
+<td>Opens the command palette, to run a ribbon command or jump to a changed element by typing part of its name.</td>
+</tr>
+<tr>
+<td><strong>RESOLVE</strong></td>
+<td><strong>Take ours</strong>, <strong>Take theirs</strong>, <strong>Take both</strong>, <strong>Isolate</strong>, <strong>Undo</strong></td>
+<td>Settle the conflict you have stepped to. See <a href="../resolving/">Resolving conflicts</a>.</td>
+</tr>
+<tr>
+<td><strong>COMPARE</strong></td>
+<td><strong>Structure</strong></td>
+<td>Shows or hides the Structural diff.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Reformat</strong></td>
+<td>Re-indents the merged result, keeping the file’s own indent and line endings. Available once no conflicts are left, and never in a text merge.</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="view-tab">View tab</h3><a class="sl-anchor-link" href="#view-tab"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “View tab”</span></a></div>
+<figure><a href="/MXmlBench/_astro/ribbon-view.DTqEzY0h.webp" title="Open full size"><img src="/MXmlBench/_astro/ribbon-view.DTqEzY0h_ZSgSk1.webp" srcset="/MXmlBench/_astro/ribbon-view.DTqEzY0h_ZSgSk1.webp 1x, /MXmlBench/_astro/ribbon-view.DTqEzY0h_1I8MvF.webp 2x" alt="The View tab: the DISPLAY group with Wrap, Whitespace, Align lines, Zoom and Fold, and the PANES group with Base, Sync scroll and Line strip." loading="lazy" decoding="async" width="510" height="69"></a></figure>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Button</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DISPLAY</strong></td>
+<td><strong>Wrap</strong></td>
+<td>Wraps long lines in every pane.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Whitespace</strong></td>
+<td>Shows spaces and tabs.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Align lines</strong></td>
+<td>Keeps matching lines side by side across the panes, with hatched gaps. On by default.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Zoom</strong></td>
+<td>Makes the text larger. Its menu has <strong>Zoom in</strong>, <strong>Zoom out</strong> and <strong>Reset zoom</strong>.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Fold</strong></td>
+<td><strong>Fold all</strong> collapses every element; <strong>Unfold all</strong> opens them again.</td>
+</tr>
+<tr>
+<td><strong>PANES</strong></td>
+<td><strong>Base</strong></td>
+<td>Shows or hides the base pane.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Sync scroll</strong></td>
+<td>Scrolls the panes together. On by default.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Line strip</strong></td>
+<td>Shows or hides the line strip. On by default.</td>
+</tr>
+</tbody>
+</table>
+<p>A table tab has its own <strong>Resolve</strong> and <strong>View</strong> tabs; see <a href="../tables/">Tables</a>.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="status-and-finishing-buttons">Status and finishing buttons</h3><a class="sl-anchor-link" href="#status-and-finishing-buttons"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Status and finishing buttons”</span></a></div>
+<p>The right end of the ribbon shows where the merge stands and holds the buttons that end it.</p>
+<figure><a href="/MXmlBench/_astro/save-pinned.DqBumhhk.webp" title="Open full size"><img src="/MXmlBench/_astro/save-pinned.DqBumhhk_Z1Xkewk.webp" srcset="/MXmlBench/_astro/save-pinned.DqBumhhk_Z1Xkewk.webp 1x, /MXmlBench/_astro/save-pinned.DqBumhhk_1zpT8C.webp 2x" alt="The right end of the ribbon: 1 conflict unresolved, 9 unresolved fallbacks, Keep for later, and Save &amp; finish." loading="lazy" decoding="async" width="600" height="46"></a></figure>
+<ul>
+<li><strong>1 conflict unresolved</strong> counts the conflicts still open in the merged result. It changes to <strong>no conflicts</strong> when none are left.</li>
+<li><strong>unresolved fallbacks</strong> counts groups of elements the driver paired by position rather than by name. It asks for a glance, and never blocks saving. See <a href="../resolving/#unresolved-fallbacks">Unresolved fallbacks</a>.</li>
+<li>Notes about the file appear here too: why it was <a href="../resolving/#text-merges">merged as text</a>, what stray characters were removed, and whether the last save worked.</li>
+<li>Under git mergetool the buttons are <strong>Keep for later</strong> and <strong>Save &amp; finish</strong>. Otherwise they are <strong>Run</strong>, which runs the driver again, and <strong>Save result</strong>. <a href="../saving/">Saving and finishing</a> covers both.</li>
+</ul></div><footer class="sl-flex astro-ddtxxk7k"><div class="meta sl-flex astro-ddtxxk7k"></div><div class="pagination-links print:hidden astro-b5raizh3" dir="ltr"><a href="/MXmlBench/start/installing/" rel="prev" class="astro-b5raizh3"><svg aria-hidden="true" class="astro-b5raizh3 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg><span class="astro-b5raizh3">Previous<br class="astro-b5raizh3"><span class="link-title astro-b5raizh3">Installing</span></span></a><a href="/MXmlBench/workbench/resolving/" rel="next" class="astro-b5raizh3"><svg aria-hidden="true" class="astro-b5raizh3 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg><span class="astro-b5raizh3">Next<br class="astro-b5raizh3"><span class="link-title astro-b5raizh3">Resolving conflicts</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>
